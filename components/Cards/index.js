@@ -32,6 +32,22 @@ axios
       newCard = Card(item);
       cardsContainer.appendChild(newCard);
     });
+    response.data.articles.javascript.forEach(item => {
+      newCard = Card(item);
+      cardsContainer.appendChild(newCard);
+    });
+    response.data.articles.technology.forEach(item => {
+      newCard = Card(item);
+      cardsContainer.appendChild(newCard);
+    });
+    response.data.articles.jquery.forEach(item => {
+      newCard = Card(item);
+      cardsContainer.appendChild(newCard);
+    });
+    response.data.articles.node.forEach(item => {
+      newCard = Card(item);
+      cardsContainer.appendChild(newCard);
+    });
   });
 
 function Card(obj) {
@@ -58,7 +74,6 @@ function Card(obj) {
 
   // build content from object
   headline.textContent = obj.headline;
-
   span.textContent = `By ${obj.authorName}`;
   img.src = obj.authorPhoto;
   return card;
